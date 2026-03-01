@@ -1,0 +1,976 @@
+@font-face {
+  font-family: "Squares Bold";
+  src: url("../fonts/Squares\ Bold\ Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert Mono TRIAL";
+  src: url("../fonts/RoobertMonoTRIAL-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert Mono TRIAL";
+  src: url("../fonts/RoobertMonoTRIAL-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert Mono TRIAL";
+  src: url("../fonts/RoobertMonoTRIAL-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert Mono TRIAL";
+  src: url("../fonts/RoobertMonoTRIAL-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert SemiMono TRIAL";
+  src: url("../fonts/RoobertSemiMonoTRIAL-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roobert SemiMono TRIAL";
+  src: url("../fonts/RoobertSemiMonoTRIAL-SemiBold.woff2") format("woff2");
+  font-weight: 650;
+  font-style: normal;
+  font-display: swap;
+}
+
+body,
+html {
+  background: linear-gradient(
+    90deg,
+    #010206 0%,
+    #0a060d 20.18%,
+    #110912 32%,
+    #08050e 41.9%,
+    #100a14 47.97%,
+    #08050d 56.59%,
+    #0f0916 64.26%,
+    #14111c 75.01%,
+    #101720 85.13%,
+    #21404b 100%
+  );
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font-family: "Roobert Mono TRIAL", monospace;
+  color: #b3c8d2;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url(../img/bg1.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+  z-index: 6;
+}
+.header__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.navbar__item {
+  display: flex;
+  padding: 20px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  color: #fff;
+  font-family: "Roobert SemiMono TRIAL";
+  font-size: 14px;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.navbar__item svg,
+.buttons .btn svg {
+  position: absolute;
+  display: none;
+}
+
+.navbar__item svg:nth-child(1),
+.buttons .btn svg:nth-child(1) {
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+}
+
+.navbar__item svg:nth-child(2),
+.buttons .btn svg:nth-child(2) {
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: auto;
+}
+
+.navbar__item svg:nth-child(3),
+.buttons .btn svg:nth-child(3) {
+  left: 0;
+  top: auto;
+  right: auto;
+  bottom: 0;
+}
+
+.navbar__item svg:nth-child(4),
+.buttons .btn svg:nth-child(4) {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+}
+
+.btn {
+  cursor: pointer;
+  z-index: 6;
+}
+
+.navbar__item:hover {
+  background: linear-gradient(
+    261deg,
+    rgba(76, 235, 239, 0.1) -0.43%,
+    rgba(80, 204, 228, 0.1) 92.65%
+  );
+}
+
+.navbar__item:hover svg {
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons .btn {
+  display: flex;
+  padding: 16px 30px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roobert SemiMono TRIAL";
+  color: #fff;
+  font-weight: 650;
+  letter-spacing: -0.32px;
+  position: relative;
+}
+
+.buttons .btn svg {
+  display: block;
+}
+
+.buttons .btn:nth-child(1) {
+  background: linear-gradient(
+    261deg,
+    rgba(76, 235, 239, 0.05) -0.43%,
+    rgba(80, 204, 228, 0.05) 92.65%
+  );
+}
+
+.buttons .btn:nth-child(2) {
+  background: linear-gradient(
+    261deg,
+    rgba(76, 235, 239, 0.3) -0.43%,
+    rgba(80, 204, 228, 0.3) 92.65%
+  );
+}
+
+.home__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  position: relative;
+  z-index: 4;
+  padding: 0 15px;
+}
+
+h1 {
+  max-width: 975px;
+  color: #fff;
+}
+
+h1 .stroke {
+  color: #0f1321;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(162, 235, 255, 0.8);
+  font-family: "Squares Bold";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+h1 .color {
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  font-family: "Squares Bold";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.home__text p {
+  font-weight: 300;
+  color: #fff;
+}
+
+.counts {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+  text-align: left;
+  color: #e1f9ff;
+  font-weight: 300;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  z-index: 3;
+}
+
+.caption {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  color: #e1f9ff;
+  z-index: 3;
+}
+
+.corner__left {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 2;
+}
+
+.corner__right {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+}
+
+.scene__moon {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: -15%;
+  top: 45%;
+}
+
+.moon {
+  width: 50%;
+  height: auto;
+}
+
+.flag {
+  position: absolute;
+  left: 15%;
+  top: -20%;
+  z-index: 2;
+}
+
+.hero__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 7%;
+  z-index: 2;
+}
+
+.hero__video video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  inset: 0;
+}
+
+.hero__end {
+  opacity: 0;
+  transition: opacity 0.001s ease;
+}
+
+video {
+  z-index: 2;
+}
+
+.stones {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  left: 0;
+  top: 0;
+}
+
+.x__stone {
+  position: absolute;
+  right: 7%;
+  top: 23%;
+  width: 120px;
+  cursor: pointer;
+}
+
+.x__stone svg {
+  position: absolute;
+  left: 37%;
+  top: 29%;
+  height: auto;
+  width: 40%;
+}
+
+.axiom__stone {
+  position: absolute;
+  right: 5%;
+  top: 43%;
+  width: 100px;
+  cursor: pointer;
+}
+
+.axiom__stone svg {
+  position: absolute;
+  left: 21%;
+  top: 25%;
+  width: 40%;
+  height: auto;
+  transform: rotate(-2deg);
+}
+
+.binance__stone {
+  position: absolute;
+  right: 10%;
+  top: 62%;
+  width: 120px;
+  cursor: pointer;
+}
+
+.binance__stone svg {
+  position: absolute;
+  left: 25%;
+  top: 11%;
+  height: auto;
+  width: 57%;
+}
+
+.telegram__stone {
+  position: absolute;
+  right: 4%;
+  top: 75%;
+  width: 120px;
+  cursor: pointer;
+}
+
+.telegram__stone svg {
+  position: absolute;
+  left: 27%;
+  top: 22%;
+  height: auto;
+  width: 40%;
+}
+
+.mexc__stone {
+  position: absolute;
+  right: 17%;
+  top: 80%;
+  width: 120px;
+  cursor: pointer;
+}
+
+.mexc__stone svg {
+  position: absolute;
+  left: 19%;
+  top: 21%;
+  height: auto;
+  width: 60%;
+}
+
+.link__info {
+  position: absolute;
+  right: 60%;
+  top: 60%;
+  color: rgba(225, 249, 255, 0.8);
+  font-size: 14px;
+  font-weight: 300;
+  z-index: 8;
+  background: linear-gradient(
+    262deg,
+    rgba(35, 49, 59, 0.5) 0.27%,
+    rgba(14, 16, 22, 0.5) 99.35%
+  );
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 250px;
+  pointer-events: none;
+}
+
+.telegram__stone:hover .link__info,
+.x__stone:hover .link__info,
+.axiom__stone:hover .link__info,
+.binance__stone:hover .link__info,
+.mexc__stone:hover .link__info {
+  opacity: 1;
+  z-index: 999 !important;
+}
+
+@media (min-width: 2150px) {
+  .hero__video {
+  }
+
+  .moon {
+  }
+
+  .flag {
+    top: -12%;
+    left: 17%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero__video {
+    width: 1400px;
+    top: 15%;
+    left: 0%;
+  }
+
+  .moon {
+    width: 800px;
+  }
+
+  .flag {
+    width: 250px;
+    left: 20%;
+    top: -15%;
+  }
+
+  .x__stone {
+    position: absolute;
+    right: 15%;
+    top: 35%;
+    width: 100px;
+    cursor: pointer;
+  }
+
+  .axiom__stone {
+    position: absolute;
+    right: 5%;
+    top: 43%;
+    width: 90px;
+    cursor: pointer;
+  }
+  .binance__stone {
+    position: absolute;
+    right: 15%;
+    top: 70%;
+    width: 90px;
+    cursor: pointer;
+  }
+
+  .telegram__stone {
+    position: absolute;
+    right: 4%;
+    top: 75%;
+    width: 100px;
+    cursor: pointer;
+  }
+
+  .mexc__stone {
+    position: absolute;
+    right: 17%;
+    top: 80%;
+    width: 100px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__video {
+    width: 1200px;
+    top: 25%;
+  }
+}
+
+@media (max-width: 1070px) {
+  h1 .stroke,
+  h1 .color {
+    font-size: 35px;
+  }
+
+  .hero__video {
+    width: 1000px;
+  }
+
+  .flag {
+    left: 25%;
+  }
+}
+
+@media (max-width: 900px) {
+  .moon {
+    width: 700px;
+  }
+
+  .counts,
+  .caption,
+  .link__info {
+    font-size: 12px;
+  }
+
+  .flag {
+    top: -20%;
+  }
+
+  .hero__video {
+    left: -15%;
+  }
+
+  .header {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .moon {
+    width: 600px;
+  }
+
+  .flag {
+    width: 200px;
+  }
+
+  .hero__video {
+    left: -15%;
+  }
+
+  .x__stone {
+    right: 15%;
+    top: 35%;
+    width: 60px;
+  }
+
+  .axiom__stone {
+    right: 13%;
+    top: 65%;
+    width: 60px;
+  }
+  .binance__stone {
+    right: 5%;
+    top: 43%;
+    width: 60px;
+  }
+
+  .telegram__stone {
+    right: 13%;
+    top: 27%;
+    width: 60px;
+  }
+
+  .mexc__stone {
+    right: 8%;
+    top: 55%;
+    width: 60px;
+  }
+}
+
+@media (max-width: 690px) {
+  .hero__video {
+    left: -15%;
+    top: 30%;
+    width: 800px;
+  }
+
+  .scene__moon {
+    top: 36%;
+    left: -20%;
+  }
+
+  h1 .color,
+  h1 .stroke {
+    font-size: 28px;
+  }
+
+  .home__text p {
+    font-size: 14px;
+  }
+
+  .flag {
+    left: 20%;
+    top: -26%;
+  }
+
+  .moon {
+    width: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .scene__moon {
+    top: 46%;
+    left: -25%;
+  }
+
+  .hero__video {
+    width: 700px;
+    left: -35%;
+    top: 40%;
+  }
+
+  .caption {
+    display: none;
+  }
+
+  .flag {
+    left: 25%;
+    top: -28%;
+  }
+
+  .counts__overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 110%;
+    height: 300px;
+    background: linear-gradient(180deg, #0b0b0b 0%, rgba(11, 11, 11, 0) 100%);
+    transform: rotate(180deg);
+  }
+
+  .x__stone {
+    right: 30%;
+    top: 45%;
+    width: 50px;
+  }
+
+  .axiom__stone {
+    right: 7%;
+    top: 72%;
+    width: 60px;
+  }
+  .binance__stone {
+    right: 5%;
+    top: 40%;
+    width: 60px;
+  }
+
+  .telegram__stone {
+    right: 25%;
+    top: 37%;
+    width: 60px;
+  }
+
+  .mexc__stone {
+    right: 7%;
+    top: 50%;
+    width: 60px;
+  }
+}
+
+@media (max-height: 680px) {
+  .home__text {
+    margin-top: 30px;
+  }
+
+  h1 .color,
+  h1 .stroke {
+    font-size: 22px;
+  }
+
+  .counts {
+    font-size: 10px;
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .corner__left,
+  .corner__right {
+    display: none;
+  }
+
+  .axiom__stone {
+    top: 85%;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  z-index: 70;
+}
+
+/* ===== PATCH: stones animation + glow ===== */
+
+/* Чтобы псевдо-элемент (glow) жил под картинкой */
+.stones > div {
+  will-change: transform;
+  transform: translateX(140%);
+  transition: transform 700ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+/* Камень доехал на место */
+.stones > div.is-in {
+  transform: translateX(0);
+}
+
+/* PNG и SVG поверх glow */
+.stones > div > img {
+  position: relative;
+  z-index: 3;
+}
+
+.stones > div > svg {
+  z-index: 5;
+}
+
+/* Инфо-плашка всегда выше */
+.stones .link__info {
+  z-index: 999;
+}
+
+/* Glow ПОЗАДИ PNG на hover */
+.stones > div::before {
+  content: "";
+  position: absolute;
+  inset: -45%;
+  z-index: 1;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle,
+    var(--glow, rgba(156, 255, 245, 0.6)) 0%,
+    transparent 65%
+  );
+  filter: blur(18px);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+/* На hover подсвечиваем именно камень (PNG) сзади */
+.stones > div:hover::before {
+  opacity: 1;
+}
+
+/* SVG логотипы: по умолчанию скрыты и без glow */
+.stones svg {
+  opacity: 0;
+  filter: none;
+  transition:
+    opacity 400ms ease,
+    filter 400ms ease;
+}
+
+/* После задержки (класс добавляет JS): SVG видимы + glow "их цветом" */
+.stones.svg-on svg {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px var(--glow, #9cfff5))
+    drop-shadow(0 0 22px var(--glow, #9cfff5));
+}
+
+/* fsidfsfsfsf
+
+*/
+
+/* ===== PATCH 2: stable H1 scramble without reflow ===== */
+
+h1 .color {
+  position: relative;
+  display: inline-block;
+  /* важно: ширина/переносы определяются финальным текстом внутри .final */
+}
+
+h1 .color .final {
+  /* занимает место и задает переносы, но не виден */
+  visibility: hidden;
+  white-space: pre-wrap;
+}
+
+h1 .color .scramble {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+/* ===== PATCH 2: stones fully offscreen + start only when JS adds .is-in ===== */
+
+.stones {
+  overflow: hidden; /* чтобы камни не "торчали" справа */
+  clip-path: inset(0); /* доп. страховка на некоторых браузерах */
+}
+
+.stones > div {
+  transform: translateX(220vw); /* гарантированно вне видимости */
+  transition: transform 700ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+/* Камни едут внутрь только по классу */
+.stones > div.is-in {
+  transform: translateX(0);
+}
+
+/* SVG логотипы по умолчанию скрыты и без glow */
+.stones svg {
+  opacity: 0;
+  filter: none;
+  transition:
+    opacity 400ms ease,
+    filter 400ms ease;
+}
+
+/* После задержки (класс добавляет JS): SVG видимы + glow "их цветом" */
+.stones.svg-on svg {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px var(--glow, #9cfff5))
+    drop-shadow(0 0 22px var(--glow, #9cfff5));
+}
+
+/* Hover glow позади PNG камня */
+.stones > div::before {
+  content: "";
+  position: absolute;
+  inset: -45%;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    var(--glow, rgba(156, 255, 245, 0.6)) 0%,
+    transparent 65%
+  );
+  filter: blur(18px);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.stones > div:hover::before {
+  opacity: 1;
+}
+
+.stones > div > img {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   PRELOADER
+========================= */
+body.is-loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: #0b0b0b;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.preloader.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader__box {
+  width: min(420px, 86vw);
+  padding: 22px 18px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(11, 11, 11, 0.68);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  text-align: center;
+}
+
+.preloader__logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 14px;
+  filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.08));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.preloader__line {
+  height: 2px;
+  width: 100%;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.preloader__bar {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.22);
+  transition: width 0.25s ease;
+}
+
+.preloader__text {
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
